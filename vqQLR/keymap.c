@@ -71,7 +71,8 @@ const key_override_t shift_8_override = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_R
 const key_override_t shift_9_override = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_RBRC);
 const key_override_t shift_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_GT);
 
-const key_override_t *key_overrides[] = {
+
+const key_override_t **key_overrides = (const key_override_t *[]){
     &shift_period_override,
     &alt_period_override,
     &shift_comma_override,
@@ -92,7 +93,8 @@ const key_override_t *key_overrides[] = {
     &shift_7_override,
     &shift_8_override,
     &shift_9_override,
-    &shift_0_override
+    &shift_0_override,
+    NULL
 };
 
 
