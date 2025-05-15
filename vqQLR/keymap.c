@@ -48,6 +48,52 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 
+const key_override_t shift_period_override = ko_make_basic(MOD_MASK_SHIFT, KC_DOT, KC_EXLM);
+const key_override_t alt_period_override = ko_make_basic(MOD_MASK_ALT, KC_DOT, KC_QUES);
+const key_override_t shift_comma_override = ko_make_basic(MOD_MASK_SHIFT, KC_COMM, KC_COLN);
+const key_override_t alt_comma_override = ko_make_basic(MOD_MASK_ALT, KC_COMM, KC_SCLN);
+const key_override_t alt_quote_override = ko_make_basic(MOD_MASK_ALT, KC_QUOT, KC_GRV);
+const key_override_t shift_at_override = ko_make_basic(MOD_MASK_SHIFT, KC_AT, KC_TILD);
+const key_override_t alt_at_override = ko_make_basic(MOD_MASK_ALT, KC_AT, KC_ASTR);
+const key_override_t shift_ampr_override = ko_make_basic(MOD_MASK_SHIFT, KC_AMPR, KC_PIPE);
+const key_override_t alt_ampr_override = ko_make_basic(MOD_MASK_ALT, KC_AMPR, KC_UNDS);
+const key_override_t shift_spc_override = ko_make_basic(MOD_MASK_SHIFT, KC_SPC, KC_TAB);
+const key_override_t shift_bspc_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
+const key_override_t shift_1_override = ko_make_basic(MOD_MASK_SHIFT, KC_1, KC_LT;
+const key_override_t shift_2_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, KC_LBRC);
+const key_override_t shift_3_override = ko_make_basic(MOD_MASK_SHIFT, KC_3, KC_LCBR);
+const key_override_t shift_4_override = ko_make_basic(MOD_MASK_SHIFT, KC_4, KC_LPRN);
+const key_override_t shift_5_override = ko_make_basic(MOD_MASK_SHIFT, KC_5, KC_BSLS);
+const key_override_t shift_6_override = ko_make_basic(MOD_MASK_SHIFT, KC_6, KC_SLSH);
+const key_override_t shift_7_override = ko_make_basic(MOD_MASK_SHIFT, KC_7, KC_RPRN);
+const key_override_t shift_8_override = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_RCBR);
+const key_override_t shift_9_override = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_RBRC);
+const key_override_t shift_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_GT);
+
+const key_override_t *key_overrides[] = {
+    &shift_period_override,
+    &alt_period_override,
+    &shift_comma_override,
+    &alt_comma_override,
+    &alt_quote_override,
+    &shift_at_override,
+    &alt_at_override,
+    &shift_ampr_override,
+    &alt_ampr_override,
+    &shift_spc_override,
+    &shift_bspc_override,
+    &shift_1_override,
+    &shift_2_override,
+    &shift_3_override,
+    &shift_4_override,
+    &shift_5_override,
+    &shift_6_override,
+    &shift_7_override,
+    &shift_8_override,
+    &shift_9_override,
+    &shift_0_override
+};
+
 
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
