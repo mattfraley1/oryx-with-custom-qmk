@@ -58,17 +58,18 @@ const key_override_t shift_at_override = ko_make_basic(MOD_MASK_SHIFT, KC_AT, KC
 const key_override_t alt_at_override = ko_make_basic(MOD_MASK_ALT, KC_AT, KC_ASTR);
 const key_override_t shift_spc_override = ko_make_basic(MOD_MASK_SHIFT, KC_SPC, KC_TAB);
 const key_override_t shift_bspc_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
-const key_override_t shift_1_override = ko_make_basic(MOD_MASK_SHIFT, KC_1, KC_LT);
-const key_override_t shift_2_override = ko_make_basic(MOD_MASK_SHIFT, KC_2, KC_LBRC);
-const key_override_t shift_3_override = ko_make_basic(MOD_MASK_SHIFT, KC_3, KC_LCBR);
-const key_override_t shift_4_override = ko_make_basic(MOD_MASK_SHIFT, KC_4, KC_LPRN);
-const key_override_t shift_5_override = ko_make_basic(MOD_MASK_SHIFT, KC_5, KC_BSLS);
-const key_override_t shift_6_override = ko_make_basic(MOD_MASK_SHIFT, KC_6, KC_SLSH);
-const key_override_t shift_7_override = ko_make_basic(MOD_MASK_SHIFT, KC_7, KC_RPRN);
-const key_override_t shift_8_override = ko_make_basic(MOD_MASK_SHIFT, KC_8, KC_RCBR);
-const key_override_t shift_9_override = ko_make_basic(MOD_MASK_SHIFT, KC_9, KC_RBRC);
-const key_override_t shift_0_override = ko_make_basic(MOD_MASK_SHIFT, KC_0, KC_GT);
 
+const negative_mod_mask NEG_GUI_MASK = (uint8_t) ~(MOD_BIT(KC_RGUI) | MOD_BIT(KC_LGUI));
+const key_override_t shift_1_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_1, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_2_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_2, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_3_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_3, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_4_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_4, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_5_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_5, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_6_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_6, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_7_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_7, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_8_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_8, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_9_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_9, KC_LT, ~0, NEG_GUI_MASK);
+const key_override_t shift_0_override = ko_make_with_layers_and_negmods(MOD_MASK_SHIFT,	KC_0, KC_LT, ~0, NEG_GUI_MASK);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &shift_period_override,
